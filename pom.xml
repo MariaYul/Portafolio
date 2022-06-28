@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.telcel.gsrh.solicitudcurso</groupId>
+	<artifactId>Solicitudes</artifactId>
+	<version>1.0</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<java.version>1.6</java.version>
+		<maven-compiler.version>3.1</maven-compiler.version>
+		<maven-war.version>2.3</maven-war.version>
+		<!-- Commons-IO -->
+		<commons-io.version>2.4</commons-io.version>
+
+		<!-- Commons-fileUpload -->
+		<commons-fileupload.version>1.3.1</commons-fileupload.version>
+
+		<!-- EL Context -->
+		<el-context.version>2.2.1</el-context.version>
+
+		<!-- Guava -->
+		<guava.version>17.0</guava.version>
+
+		<!-- Hibernate -->
+		<hibernate.version>4.1.7.Final</hibernate.version>
+		<hibernate.persistence.version>1.0.0.Final</hibernate.persistence.version>
+		<javassist.version>3.15.0-GA</javassist.version>
+
+		<!-- Itext -->
+		<itext.version>2.1.7</itext.version>
+
+		<!-- JAX WS -->
+		<jaxwsapi.version>2.2.8</jaxwsapi.version>
+		<jaxb.version>2.2.4</jaxb.version>
+		<jaxwsrt.version>2.2.8</jaxwsrt.version>
+
+		<!-- JBIG2 IMAGEIO -->
+		<!-- <jbig2.version>1.6.1</jbig2.version> -->
+
+		<!-- Jsch -->
+		<jsch.version>0.1.53</jsch.version>
+
+		<!-- JSON -->
+		<jackson.core.version>2.5.4</jackson.core.version>
+		<jackson.mapper.asl.version>1.9.13</jackson.mapper.asl.version>
+
+		<!-- Ldap -->
+		<telcel.ldap.version>1.0</telcel.ldap.version>
+
+		<!-- Logging -->
+		<log4j.version>1.2.14</log4j.version>
+
+		<!-- Oracle -->
+		<jdbc.oracle.version>11.2.0.3.0</jdbc.oracle.version>
+
+		<pdfbox.version>1.8.9</pdfbox.version>
+
+		<!-- Pool -->
+		<commons-dbcp.version>1.2.2</commons-dbcp.version>
+
+		<!-- Sitemesh -->
+		<sitemesh.version>3.0.0</sitemesh.version>
+
+		<!-- Sonar -->
+		<sonar.language>java</sonar.language>
+
+		<!-- Spring MVC -->
+		<spring.version>4.1.6.RELEASE</spring.version>
+
+		<!-- Spring Security -->
+		<spring.security.version>3.2.5.RELEASE</spring.security.version>
+
+		<!-- Test -->
+		<junit.version>4.11</junit.version>
+
+		<!-- Web -->
+		<jsp.version>2.2</jsp.version>
+		<jstl.version>1.2</jstl.version>
+		<servletapi.version>3.0.1</servletapi.version>
+	</properties>
+
+	<dependencies>
+		<!-- Commons-IO -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+
+		<!-- Commons-FileUpload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload.version}</version>
+		</dependency>
+
+		<!-- EL Context -->
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>${el-context.version}</version>
+		</dependency>
+
+		<!-- Guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>${javassist.version}</version>
+		</dependency>
+
+		<!-- Itext -->
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>${itext.version}</version>
+		</dependency>
+
+		<!-- JAX WS -->
+		<dependency>
+			<groupId>javax.xml.ws</groupId>
+			<artifactId>jaxws-api</artifactId>
+			<version>${jaxwsapi.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>${jaxb.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>${jaxwsrt.version}</version>
+		</dependency>
+
+
+
+		<!-- Jsch -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>${jsch.version}</version>
+		</dependency>
+
+		<!-- JSON -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.mapper.asl.version}</version>
+		</dependency>
+
+		<!-- Ldap -->
+		<dependency>
+			<groupId>com.telcel.gsa.dswi</groupId>
+			<artifactId>telcel-ldap</artifactId>
+			<version>${telcel.ldap.version}</version>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- Oracle -->
+		<dependency>
+			<groupId>cn.guoyukun.jdbc</groupId>
+			<artifactId>oracle-ojdbc6</artifactId>
+			<version>${jdbc.oracle.version}</version>
+		</dependency>
+
+		<!-- Pdfbox -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>${pdfbox.version}</version>
+		</dependency>
+
+		<!-- Mail -->
+		<dependency>
+			<groupId>com.telcel.dsrh</groupId>
+			<artifactId>EnviaMailDSRH</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<!-- Pool -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${commons-dbcp.version}</version>
+		</dependency>
+
+		<!-- Sitemesh -->
+		<dependency>
+			<groupId>org.sitemesh</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>${sitemesh.version}</version>
+		</dependency>
+
+		<!-- Spring Beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Spring MVC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Spring ORM -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<!-- Spring Web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.stream.buffer</groupId>
+			<artifactId>streambuffer</artifactId>
+			<version>1.5.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Web -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+
+		<!-- JAXWS for Java 11 -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.sun.xml.ws</groupId> -->
+		<!-- <artifactId>jaxws-rt</artifactId> -->
+		<!-- <version>2.3.0</version> -->
+		<!-- </dependency> -->
+
+<dependency>
+    <groupId>com.sun.xml.ws</groupId>
+    <artifactId>policy</artifactId>
+    <version>2.3.1</version>
+</dependency>
+
+<dependency>
+    <groupId>com.sun.xml.ws</groupId>
+    <artifactId>jaxws-rt</artifactId>
+    <version>2.3.1</version>
+    <type>pom</type>
+</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>2.5</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

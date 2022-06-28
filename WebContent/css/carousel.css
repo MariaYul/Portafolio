@@ -1,0 +1,68 @@
+#carousel-index
+, #carousel-index .item {
+    height: 300px;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#carousel-index .glyphicon {
+    color: #9D9D9D;
+}
+
+#carousel-index .carousel-control {
+  outline: 0;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+*#carousel-index .item {
+  text-align: center;
+}
+
+#carousel-index .item img {
+    width: 80%;
+    height: 95%;
+    min-width: 600px;
+    margin: auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+  
+#carousel-index .item .carousel-caption {
+    background: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#carousel-index .item .carousel-caption p {
+    text-align: center;
+}
+
+#carousel-index .carousel-control.left {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-image: none;
+}
+
+#carousel-index .carousel-control.right {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-image: none;
+}
+
+
+
+
